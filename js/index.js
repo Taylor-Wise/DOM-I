@@ -105,8 +105,20 @@ const copyRight = document.querySelector("footer p")
 
 copyRight.textContent = siteContent["footer"]["copyright"]
 
+var a = document.createElement('a');
+var node1 = document.createTextNode("Locations");
+a.appendChild(node1);
+a.href = "#";
 
-// const location = document.createElement("item");
-// location.textContent = "Locations";
+const newNav = document.querySelector("nav");
+newNav.prepend(a);
 
-// document.body.appendChild(location)
+var a2 = document.createElement('a');
+var node2 = document.createTextNode("Our Goals");
+a2.appendChild(node2);
+a2.href = "#";
+newNav.appendChild(a2);
+
+
+const greenNav = document.querySelectorAll("a")
+greenNav.forEach(function(a) {a.style.color = "green"});
